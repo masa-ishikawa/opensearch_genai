@@ -1,0 +1,8 @@
+opensearch_url: "https://amaaaaaaaaaaa.opensearch.us-ashburn-1.oci.oraclecloud.com:9200"
+http_auth:
+  username: "guest"
+  password: "Wellcome#123"
+service_endpoint: "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com"
+compartment_id: "ocid1.compartment.oc1..aaaaaaa"
+emb_llm_id: "cohere.embed-multilingual-v3.0"
+gen_llm_id: "cohere.command-r-plus"
