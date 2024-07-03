@@ -1,1 +1,1 @@
-# opensearch_genai
+# OCI OpenSearchにおけるGenerativeAI用いたRAG構成
