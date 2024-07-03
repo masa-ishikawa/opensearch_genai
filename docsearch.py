@@ -33,6 +33,7 @@ def main():
     #     index=2  # デフォルトは3（0から数えて3番目）
     # )
     embeddings = OCIGenAIEmbeddings(
+        auth_type="RESOURCE_PRINCIPAL",
         model_id=emb_llm_id,
         service_endpoint=service_endpoint,
         compartment_id=compartment_id,
@@ -44,6 +45,7 @@ def main():
         http_auth=http_auth,
     )
     llm = ChatOCIGenAI(
+        auth_type="RESOURCE_PRINCIPAL",
         model_id=gen_llm_id,
         service_endpoint=service_endpoint,
         compartment_id=compartment_id,
