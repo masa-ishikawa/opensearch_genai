@@ -4,7 +4,6 @@ from langchain_community.vectorstores import OpenSearchVectorSearch
 from langchain_community.embeddings import OCIGenAIEmbeddings
 from langchain_community.document_loaders import TextLoader
 from langchain_community.vectorstores import OpenSearchVectorSearch
-from langchain_openai import ChatOpenAI
 from langchain_community.chat_models.oci_generative_ai import ChatOCIGenAI
 from langchain.chains import RetrievalQA
 from langchain import PromptTemplate
