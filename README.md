@@ -71,8 +71,8 @@ config.yamlを開いて、以下をOCIコンソールから参照し更新する
 OCIコンソールのユーザページから「APIキーの追加」を実行
 APIキー・ペアの生成を選び、秘密キーと公開キーをDLする
 下記手順を参考に、~/.oci/configを作成する
-https://www.ashisuto.co.jp/db_blog/article/N0021_OracleCloud_20200626.html
 ```
+https://www.ashisuto.co.jp/db_blog/article/N0021_OracleCloud_20200626.html
 
 ### 特定ポートの穴あけ
 ```
