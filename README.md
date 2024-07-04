@@ -3,10 +3,11 @@
 
 ## 環境構築の流れ
 * vcn作成
+* opensearch作成
 * compute立ち上げ
 * computeの環境構築
-* computeからembedding
 * firewall穴あけ
+* computeからembedding
 * ダッシュボードログイン
 * computeからアプリ起動
 * 動作確認
@@ -70,15 +71,21 @@ config.yamlを開いて、以下をOCIコンソールから参照し更新する
 ```
 OCIコンソールのユーザページから「APIキーの追加」を実行
 APIキー・ペアの生成を選び、秘密キーと公開キーをDLする
-下記手順を参考に、~/.oci/configを作成する
+画面に表示されるapiコンフィグ情報をコピーしておき、~/.oci/configを作成＆ペーストする
+
+mkdir ~/.oci
+vi ~/.oci/config
+
+DLしたapi秘密キーファイルはcloudシェルにアップロードし、config内のkeyファイルを更新する
+例）scp -i ssh-key-2024-07-04.key ./oracleidentitycloudservice_masahito.ishikawa-07-04-04-31.pem opc@150.136.171.210:~/.oci/
 ```
 https://www.ashisuto.co.jp/db_blog/article/N0021_OracleCloud_20200626.html
 
 ### 特定ポートの穴あけ
 ```
-以下のVCNのセキュリティリストを穴あけする：
-・プライベートサブネットの5601,9200(opensearch)
-・パブリックサブネットの8501(streamlit用)
+VCNのセキュリティリストを以下のポートで穴あけする：
+・プライベートサブネット：CIDR=10.0.0.0/16、ポート：5601,9200(opensearch用)
+・パブリックサブネットの：CIDR=0.0.0.0/0、ポート：8501(streamlit用)
 ```
 ```sh
 続いて、VMのファイアウォール設定から穴あけする
