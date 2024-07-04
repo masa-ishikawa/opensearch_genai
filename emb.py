@@ -18,7 +18,6 @@ emb_llm_id = config['emb_llm_id']
 gen_llm_id = config['gen_llm_id']
 
 embeddings = OCIGenAIEmbeddings(
-    auth_type="RESOURCE_PRINCIPAL",
     model_id=emb_llm_id,
     service_endpoint=service_endpoint,
     compartment_id=compartment_id,

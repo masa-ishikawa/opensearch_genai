@@ -32,7 +32,6 @@ def main():
     #     index=2  # デフォルトは3（0から数えて3番目）
     # )
     embeddings = OCIGenAIEmbeddings(
-        auth_type="RESOURCE_PRINCIPAL",
         model_id=emb_llm_id,
         service_endpoint=service_endpoint,
         compartment_id=compartment_id,
@@ -44,7 +43,6 @@ def main():
         http_auth=http_auth,
     )
     llm = ChatOCIGenAI(
-        auth_type="RESOURCE_PRINCIPAL",
         model_id=gen_llm_id,
         service_endpoint=service_endpoint,
         compartment_id=compartment_id,
@@ -62,16 +60,6 @@ def main():
             search_type="similarity",
             search_kwargs={"k": 5}
         )
-        # st.write("こんちにわ！")
-
-        # prompt_template_qa = """あなたは親切で優しいアシスタントです。丁寧に、日本語でお答えください！
-        # 質問に該当する答えが見つかった場合は、該当する全てのパスを返却してください。
-
-        # {context}
-
-        # 質問: {question}
-        # 回答（日本語）:"""
-
         prompt_template_qa = """あなたは親切で丁寧なアシスタントです。以下の質問に対して、日本語で詳しくわかりやすくお答えください。
         質問に該当する答えが見つかった場合は、すべての関連する情報源（パス）も併せて提供してください。
         該当する情報が見つからない場合や、関係のない質問については「申し訳ございません、該当する情報が見つかりませんでした」と答えてください。
@@ -99,18 +87,6 @@ def main():
             verbose=True
         )
         tret = QA.invoke(user_input)
-        # st.write("処理完了")
         st.write(tret)
-
-
-        # st.write(docs[0])
-        # data = []
-        # for doc in docs:
-        #     # page_content = doc.page_content
-        #     page_content = doc.page_content.replace('\n', '<br>').replace('\t', '&#009;')
-        #     source = doc.metadata['source']
-        #     data.append({'page_content': page_content, 'source': source})
-        # df = pd.DataFrame(data)
-        # st.markdown(df.to_html(escape=False), unsafe_allow_html=True)
 if __name__ == '__main__':
     main()
