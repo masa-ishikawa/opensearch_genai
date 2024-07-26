@@ -2,7 +2,6 @@
 
 
 ## 環境構築の流れ
-* vcn作成
 * opensearch作成
 * compute立ち上げ
 * computeの環境構築
@@ -11,6 +10,11 @@
 * ダッシュボードログイン
 * computeからアプリ起動
 * 動作確認
+
+
+## 事前準備
+* VCNは既存、もしくはなければ新規に作成します。
+* 下記リンクを参考にOpenSearchのポリシーを追加します⇒[こちら](https://docs.oracle.com/ja-jp/iaas/Content/search-opensearch/Concepts/ocisearchpermissions.htm "")
 
 
 ## 各種コマンド
