@@ -11,7 +11,10 @@
 
 
 ## 事前準備
-* VCN, compute(パブリックサブネット), opensearch(プライベートサブネット)を事前に作成しておきます。
+![image](https://github.com/user-attachments/assets/283e453d-3bd1-40d6-a819-93661bd043c2)
+
+
+* vcn, compute(パブリックサブネット), opensearch(プライベートサブネット)を事前に作成しておきます。
 * 下記リンクを参考にOpenSearchのポリシーを追加します⇒[こちら](https://docs.oracle.com/ja-jp/iaas/Content/search-opensearch/Concepts/ocisearchpermissions.htm "")
 
 
