@@ -2,8 +2,6 @@
 
 
 ## 環境構築の流れ
-* opensearch作成
-* compute立ち上げ
 * computeの環境構築
 * firewall穴あけ
 * computeからembedding
@@ -13,7 +11,7 @@
 
 
 ## 事前準備
-* VCNは既存、もしくはなければ新規に作成します。
+* VCN, compute(パブリックサブネット), opensearch(プライベートサブネット)を事前に作成しておきます。
 * 下記リンクを参考にOpenSearchのポリシーを追加します⇒[こちら](https://docs.oracle.com/ja-jp/iaas/Content/search-opensearch/Concepts/ocisearchpermissions.htm "")
 
 
