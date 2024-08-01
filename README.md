@@ -1,6 +1,15 @@
 # OCI OpenSearchにおけるGenerativeAI用いたRAG構成
 
 
+
+
+
+## 事前準備
+![image](https://github.com/user-attachments/assets/283e453d-3bd1-40d6-a819-93661bd043c2)
+* vcn, compute(パブリックサブネット), opensearch(プライベートサブネット)を事前に作成しておきます。
+* chicagoリージョンをサブスクライブします（Regionカウントが上限の場合は「サービス制限の引上のリクエスト」を発行）
+* 下記リンクを参考にOpenSearchのポリシーを追加します⇒[こちら](https://docs.oracle.com/ja-jp/iaas/Content/search-opensearch/Concepts/ocisearchpermissions.htm "")
+
 ## 環境構築の流れ
 * computeの環境構築
 * firewall穴あけ
@@ -8,15 +17,6 @@
 * ダッシュボードログイン
 * computeからアプリ起動
 * 動作確認
-
-
-## 事前準備
-![image](https://github.com/user-attachments/assets/283e453d-3bd1-40d6-a819-93661bd043c2)
-
-
-* vcn, compute(パブリックサブネット), opensearch(プライベートサブネット)を事前に作成しておきます。
-* 下記リンクを参考にOpenSearchのポリシーを追加します⇒[こちら](https://docs.oracle.com/ja-jp/iaas/Content/search-opensearch/Concepts/ocisearchpermissions.htm "")
-
 
 ## 各種コマンド
 ### cloudシェルから接続
